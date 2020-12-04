@@ -1,0 +1,154 @@
+.App-Todo {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-head {
+  width: 100%;
+}
+
+.aspect-ratio-box {
+  display: flex;
+  position: relative;
+}
+
+.aspect-ratio-box::before {
+  display: block;
+  content: "";
+  padding-top: calc((9 / 16) * 100%);
+}
+
+.media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  z-index: 2;
+  color: white;
+}
+
+.left-part::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.left-part {
+  justify-content: space-between;
+  width: 55%;
+  border-bottom: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(153, 0, 255, 1) 0%,
+    rgba(119, 28, 133, 1) 0%,
+    rgba(37, 132, 245, 1) 100%
+  );
+}
+.icon {
+  position: relative;
+}
+.title {
+  position: relative;
+}
+.current-date {
+  position: relative;
+}
+
+.right-part::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.right-part {
+  position: relative;
+  justify-content: flex-end;
+  width: 45%;
+}
+
+.tasks-count {
+  position: relative;
+  display: flex;
+  flex-grow: 0.8;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.count {
+  align-self: flex-end;
+}
+
+.percentage {
+  position: relative;
+  align-self: flex-end;
+}
+
+.todo-body {
+  display: flex;
+  flex-grow: 1;
+  padding: 5px;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.inbox{
+  height: 30px;
+  line-height: 30px;
+}
+
+.tasks-list {
+  align-items: center;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+}
+
+.tasks-list li {
+  height: 60px;
+  width: 90%;
+  justify-content: space-between;
+  display: flex;
+  font-weight: bold;
+}
+
+.container{
+  width: 80%;
+  display: flex;
+}
+
+.task-icon{
+  border: 1px solid gray;
+}
