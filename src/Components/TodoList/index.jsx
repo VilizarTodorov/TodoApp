@@ -74,27 +74,23 @@ class TodoList extends React.Component {
           <ul className="tasks-list">
             <li>
               <div className="container">
-                <p className="task-icon">icon</p>
-                <div className='task-main-info'>
-                <h3 className='task-name'>task for today</h3>
-                <p className='task-location'>task location</p>
+                <p className="task-icon">
+                  <i class="fas fa-music"></i>
+                </p>
+                <div className="task-main-info">
+                  <h3 className="task-name">Record Song</h3>
+                  <p className="task-location">Studio on Elmer</p>
                 </div>
               </div>
               <div className="time">9pm</div>
             </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
           </ul>
-
-          <p className="completed">completed 5</p>
+          <div className="add-container">
+            <p className="completed">completed 5</p>
+            <div className="add-new-task">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
         </div>
       </main>
     );
