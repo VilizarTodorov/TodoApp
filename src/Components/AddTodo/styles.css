@@ -51,7 +51,7 @@
   color: white;
   border: none;
   border-bottom: 1px solid lightgray;
-  appearance: none;
+  border-radius: 0;
 }
 
 .submit-button {
@@ -64,7 +64,7 @@
 }
 
 .submit-button:active {
-    box-shadow: inset 0px 0px 9px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 0px 9px 0 rgba(0, 0, 0, 0.4);
 }
 
 .form-item::placeholder {
@@ -73,11 +73,14 @@
 
 input:-webkit-autofill {
   -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0 30px rgb(57 79 172) inset !important;
 }
-
+/* 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px rgb(57 79 172) inset !important;
-}
+  /* border: none; */
+/* border-bottom: 1px solid lightgray; */
+/* outline: none; */
+/* } */
