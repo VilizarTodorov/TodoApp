@@ -1,7 +1,9 @@
 .App-Todo {
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .todo-head {
@@ -145,7 +147,6 @@
   display: flex;
   font-weight: bold;
   border-bottom: 1px solid gray;
-  padding: 1px;
 }
 
 .container {
@@ -183,12 +184,25 @@
   padding-right: 5px;
 }
 
-.add-new-task {
-  width: 30px;
-  height: 30px;
-  background: aqua;
+.add-new-task.icon-container {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 45px;
+  height: 45px;
+  background: #4cbff5;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  z-index: 5;
+  box-shadow: 0px 4px 14px 11px rgba(76, 191, 245, 0.2);
+}
+
+/* .add-new-task.icon-container:active {
+  box-shadow: inset 0px 0px 10px 0 rgba(0, 0, 0, 0.2) 0px 4px 14px 11px rgba(76, 191, 245, 0.2);
+} */
+
+.fa-plus {
+  color: white;
 }

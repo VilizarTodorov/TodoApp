@@ -1,37 +1,25 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { addTodoAction, completeTodoAction } from "../../redux/actions";
 import mainImg from "../../assets/mountain.jpg";
+import AddTodoForm from "../AddTodo";
 import "./styles.css";
-
-const INITIAL_STATE = {
-  category: "",
-  title: "",
-  time: "",
-  place: "",
-  note: "",
-};
 
 class TodoList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { ...INITIAL_STATE };
+    this.state = { active: false };
   }
 
-  addTodoToList = (e) => {
-    e.preventDefault();
-    const { title } = this.state;
-    this.props.addTodo({ text: title });
-  };
-
-  onChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+  expand = () => {
+    this.setState((state) => {
+      return {
+        active: !state.active,
+      };
+    });
   };
 
   render() {
-    // const { title } = this.state;
-    // const todos = this.props.todos.map((x, index) => <div key={index}>{x.text}</div>);
-
     return (
       <main className="App-Todo">
         <div className="todo-head">
@@ -75,7 +63,7 @@ class TodoList extends React.Component {
             <li>
               <div className="container">
                 <p className="task-icon">
-                  <i class="fas fa-music"></i>
+                  <img src="https://img.icons8.com/nolan/50/task-planning.png" />
                 </p>
                 <div className="task-main-info">
                   <h3 className="task-name">Record Song</h3>
@@ -85,13 +73,14 @@ class TodoList extends React.Component {
               <div className="time">9pm</div>
             </li>
           </ul>
-          <div className="add-container">
-            <p className="completed">completed 5</p>
-            <div className="add-new-task">
-              <i class="fas fa-plus"></i>
-            </div>
-          </div>
+          <p className="completed">completed 5</p>
         </div>
+
+        <div onClick={this.expand} className="add-new-task icon-container">
+          <i className="fas fa-plus"></i>
+        </div>
+
+        <AddTodoForm isActive={this.state.active} expand={this.expand}></AddTodoForm>
       </main>
     );
   }
