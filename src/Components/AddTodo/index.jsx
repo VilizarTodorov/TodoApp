@@ -50,7 +50,7 @@ class AddTodoForm extends React.Component {
 
         <form className="add-form" onSubmit={this.onSubmit}>
           <select
-            className="from-item"
+            className="form-item"
             name="task-category"
             id="task-category"
             value={category}
@@ -102,10 +102,10 @@ class AddTodoForm extends React.Component {
             value={note}
             onChange={this.onChange}
           />
-          <button>ADD YOUR THING</button>
+          <button className="submit-button">ADD YOUR THING</button>
         </form>
 
-        <div className="add-task-svg">
+        <div onClick={this.props.expand} className="add-task-svg">
           <X_SVG></X_SVG>
         </div>
       </div>

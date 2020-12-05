@@ -54,6 +54,19 @@
   appearance: none;
 }
 
+.submit-button {
+  background: #4cbff5;
+  outline: none;
+  border: none;
+  height: 40px;
+  color: white;
+  transition: none;
+}
+
+.submit-button:active {
+    box-shadow: inset 0px 0px 9px 0 rgba(0, 0, 0, 0.4);
+}
+
 .form-item::placeholder {
   color: lightgray;
 }
