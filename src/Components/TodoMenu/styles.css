@@ -1,0 +1,26 @@
+.todo-menu {
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: -55%;
+  height: 100%;
+  width: 55%;
+  /* background-color: #212165; */
+  background-color: rgb(57 79 172);
+  transition: all 0.4s ease-in-out;
+  color: white;
+  z-index: 6;
+  font-weight: bold;
+}
+
+.todo-menu.menu-active {
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 1);
+  left: 0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1px solid white;
+}

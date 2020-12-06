@@ -4,17 +4,26 @@ import { addTodoAction, completeTodoAction } from "../../redux/actions";
 import mainImg from "../../assets/mountain.jpg";
 import AddTodoForm from "../AddTodo";
 import "./styles.css";
+import TodoMenu from "../TodoMenu";
 
 class TodoList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { active: false };
+    this.state = { active: false, menuActive: false };
   }
 
   expand = () => {
     this.setState((state) => {
       return {
         active: !state.active,
+      };
+    });
+  };
+
+  expandMenu = () => {
+    this.setState((state) => {
+      return {
+        menuActive: !state.menuActive,
       };
     });
   };
@@ -29,7 +38,7 @@ class TodoList extends React.Component {
             </div>
             <section className="content left-part">
               <p className="icon">
-                <i className="fas fa-bars"></i>
+                <i onClick={this.expandMenu} className="fas fa-bars"></i>
               </p>
               <h1 className="title">
                 Your
@@ -79,7 +88,7 @@ class TodoList extends React.Component {
         <div onClick={this.expand} className="add-new-task icon-container">
           <i className="fas fa-plus"></i>
         </div>
-
+        <TodoMenu isActive={this.state.menuActive} expand={this.expandMenu}></TodoMenu>
         <AddTodoForm isActive={this.state.active} expand={this.expand}></AddTodoForm>
       </main>
     );
