@@ -5,7 +5,6 @@
   left: -55%;
   height: 100%;
   width: 55%;
-  /* background-color: #212165; */
   background-color: rgb(57 79 172);
   transition: all 0.4s ease-in-out;
   color: white;
@@ -23,4 +22,10 @@
   align-items: center;
   height: 40px;
   border-bottom: 1px solid white;
+}
+
+.menu-arrow{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }

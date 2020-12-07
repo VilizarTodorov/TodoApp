@@ -1,17 +1,37 @@
 import React from "react";
+import { connect } from "react-redux";
+import { clearAllAction, clearCompletedAction, markAllAsCompletedAction } from "../../redux/actions";
 import "./styles.css";
 
 const TodoMenu = (props) => {
+  const clearAll = () => props.clearAll();
+  const clearCompleted = () => props.clearCompleted();
+  const markAllAsCompleted = () => props.markAllAsCompleted();
+
   return (
     <aside className={`todo-menu ${props.isActive ? "menu-active" : ""}`}>
       <ul className="menu-options">
-        <li className="option">Clear all</li>
-        <li className="option">Clear Completed</li>
-        <li className="option">Mark All Completed</li>
+        <li onClick={clearAll} className="option">
+          Clear all
+        </li>
+        <li onClick={clearCompleted} className="option">
+          Clear Completed
+        </li>
+        <li onClick={markAllAsCompleted} className="option">
+          Mark All Completed
+        </li>
       </ul>
-      <i onClick={props.expand} className="fas fa-arrow-left fa-lg"></i>
+      <i onClick={props.expand} className="fas fa-arrow-left fa-lg menu-arrow"></i>
     </aside>
   );
 };
 
-export default TodoMenu;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    clearAll: () => dispatch(clearAllAction()),
+    clearCompleted: () => dispatch(clearCompletedAction()),
+    markAllAsCompleted: () => dispatch(markAllAsCompletedAction()),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(TodoMenu);

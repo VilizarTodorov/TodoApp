@@ -42,4 +42,10 @@ const clearSingleTodoAction = (id) => {
   };
 };
 
-export { addTodoAction, completeTodoAction, clearAllAction, clearCompletedAction, clearSingleTodoAction };
+const markAllAsCompletedAction = () => {
+  return {
+    type: actionTypes.MARK_ALL_AS_COMPLETED,
+  };
+};
+
+export { addTodoAction, completeTodoAction, clearAllAction, clearCompletedAction, clearSingleTodoAction, markAllAsCompletedAction };
