@@ -4,9 +4,18 @@ import { clearAllAction, clearCompletedAction, markAllAsCompletedAction } from "
 import "./styles.css";
 
 const TodoMenu = (props) => {
-  const clearAll = () => props.clearAll();
-  const clearCompleted = () => props.clearCompleted();
-  const markAllAsCompleted = () => props.markAllAsCompleted();
+  const clearAll = () => {
+    props.clearAll();
+    props.expand();
+  };
+  const clearCompleted = () => {
+    props.clearCompleted();
+    props.expand();
+  };
+  const markAllAsCompleted = () => {
+    props.markAllAsCompleted();
+    props.expand();
+  };
 
   return (
     <aside className={`todo-menu ${props.isActive ? "menu-active" : ""}`}>

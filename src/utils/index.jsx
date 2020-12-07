@@ -1,8 +1,14 @@
 import React from "react";
 
-export const BUSINESS_TASK_ICON = () => <img src="https://img.icons8.com/nolan/50/task-planning.png" />;
-export const TASK_COMPLETED_ICON = () => <img src="https://img.icons8.com/nolan/50/taskCompleted.png" />;
-export const PERSONAL_TASK_ICON = () => <img src="https://img.icons8.com/nolan/50/personal-growth.png" />;
+// export const BUSINESS_TASK_ICON = () => <img src="https://img.icons8.com/nolan/50/task-planning.png" />;
+// export const TASK_COMPLETED_ICON = () => <img src="https://img.icons8.com/nolan/50/taskCompleted.png" />;
+// export const PERSONAL_TASK_ICON = () => <img src="https://img.icons8.com/nolan/50/personal-growth.png" />;
+
+export const images = {
+  personal: <img src="https://img.icons8.com/nolan/50/task-planning.png" alt="personal task image" />,
+  business: <img src="https://img.icons8.com/nolan/50/task-planning.png" alt="business task image" />,
+  completed: <img src="https://img.icons8.com/nolan/50/taskCompleted.png" alt="completed task image" />,
+};
 
 export const X_SVG = () => {
   return (

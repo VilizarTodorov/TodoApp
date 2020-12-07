@@ -1,9 +1,11 @@
 import React from "react";
 import { TODO_LIST_SVG, X_SVG } from "../../utils";
+import { addTodoAction } from "../../redux/actions";
 import "./styles.css";
+import { connect } from "react-redux";
 
 const INITIAL_STATE = {
-  category: "Select Category",
+  category: "",
   title: "",
   time: "",
   place: "",
@@ -26,7 +28,18 @@ class AddTodoForm extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
+    const { category, title, time, place, note } = this.state;
+    const content = {
+      category,
+      title,
+      time,
+      place,
+      note,
+      completed: false,
+    };
+
+    this.props.addTodo(content);
+    this.setState({ ...INITIAL_STATE });
   };
 
   render() {
@@ -55,8 +68,9 @@ class AddTodoForm extends React.Component {
             id="task-category"
             value={category}
             onChange={this.selectCategory}
+            required
           >
-            <option className="form-item" value="select-category">
+            <option disabled hidden className="form-item" value="">
               Select Category
             </option>
             <option className="form-item" value="business">
@@ -74,6 +88,7 @@ class AddTodoForm extends React.Component {
             placeholder="Task Title"
             value={title}
             onChange={this.onChange}
+            required
           />
           <input
             className="form-item"
@@ -113,4 +128,10 @@ class AddTodoForm extends React.Component {
   }
 }
 
-export default AddTodoForm;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addTodo: (content) => dispatch(addTodoAction(content)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(AddTodoForm);

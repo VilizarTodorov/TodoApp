@@ -1,6 +1,6 @@
 import * as actionTypes from "./actionTypes";
 
-const INITIAL_STATE = [{ completed: false }];
+const INITIAL_STATE = [];
 
 const rootReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {

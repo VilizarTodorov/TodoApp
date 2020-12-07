@@ -139,7 +139,7 @@
   flex-direction: column;
 }
 
-.tasks-list li {
+.todo-entry {
   height: 70px;
   width: 90%;
   justify-content: space-between;

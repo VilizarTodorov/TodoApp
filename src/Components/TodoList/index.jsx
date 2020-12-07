@@ -1,10 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addTodoAction, completeTodoAction } from "../../redux/actions";
+import { completeTodoAction } from "../../redux/actions";
 import mainImg from "../../assets/mountain.jpg";
 import AddTodoForm from "../AddTodo";
 import "./styles.css";
 import TodoMenu from "../TodoMenu";
+import TodoEntry from "../TodoEntry";
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -29,6 +30,9 @@ class TodoList extends React.Component {
   };
 
   render() {
+    // const taskList = this.props.todos.map();
+    console.log(this.props)
+
     return (
       <main className="App-Todo">
         <div className="todo-head">
@@ -69,18 +73,7 @@ class TodoList extends React.Component {
         <div className="todo-body">
           <p className="inbox">INBOX</p>
           <ul className="tasks-list">
-            <li>
-              <div className="container">
-                <p className="task-icon">
-                  <img src="https://img.icons8.com/nolan/50/task-planning.png" />
-                </p>
-                <div className="task-main-info">
-                  <h3 className="task-name">Record Song</h3>
-                  <p className="task-location">Studio on Elmer</p>
-                </div>
-              </div>
-              <div className="time">9pm</div>
-            </li>
+           {/* {taskList} */}
           </ul>
           <p className="completed">completed 5</p>
         </div>
@@ -103,7 +96,6 @@ const mapStateToPros = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addTodo: (content) => dispatch(addTodoAction(content)),
     completeTodo: (id) => dispatch(completeTodoAction(id)),
   };
 };
