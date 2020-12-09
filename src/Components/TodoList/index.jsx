@@ -82,7 +82,7 @@ class TodoList extends React.Component {
             </div>
             <section className="content left-part">
               <p className="icon">
-                <i onClick={this.expandMenu} className="fas fa-bars"></i>
+                <i onClick={this.expandMenu} className="fas fa-bars fa-lg clickable"></i>
               </p>
               <h1 className="title">
                 Your
@@ -131,7 +131,7 @@ class TodoList extends React.Component {
           <p className="completed">completed {completedCount}</p>
         </div>
 
-        <div onClick={this.expand} className="add-new-task icon-container">
+        <div onClick={this.expand} className="add-new-task icon-container clickable">
           <i className="fas fa-plus"></i>
         </div>
         <TodoMenu isActive={this.state.menuActive} expand={this.expandMenu}></TodoMenu>

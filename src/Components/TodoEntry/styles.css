@@ -26,6 +26,14 @@
 
 .task-main-info {
   margin-left: 10px;
+  width: calc(100% - 80px);
+}
+
+.task-info {
+  width: 100%;
+  word-wrap: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .time-controls-wrapper {

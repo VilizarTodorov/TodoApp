@@ -49,7 +49,7 @@ class AddTodoForm extends React.Component {
       <div className={`App-add-task ${this.props.isActive ? "active" : ""}`}>
         <div className="add-task-header-part">
           <div onClick={this.props.expand}>
-            <i className="fas fa-arrow-left"></i>
+            <i className="fas fa-arrow-left clickable"></i>
           </div>
           <p>Add new thing</p>
           <div>
@@ -117,10 +117,10 @@ class AddTodoForm extends React.Component {
             value={note}
             onChange={this.onChange}
           />
-          <button className="submit-button">ADD YOUR THING</button>
+          <button className="submit-button clickable">ADD YOUR THING</button>
         </form>
 
-        <div onClick={this.props.expand} className="add-task-svg">
+        <div onClick={this.props.expand} className="add-task-svg clickable">
           <X_SVG></X_SVG>
         </div>
       </div>
