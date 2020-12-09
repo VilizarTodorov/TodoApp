@@ -8,7 +8,12 @@ const rootReducer = (state = INITIAL_STATE, action) => {
       return [...state, { id: action.payload.id, ...action.payload.content }];
 
     case actionTypes.COMPLETE_TODO:
-      return state.map((todo) => (todo.id === action.payload.id ? (todo.completed = !todo.completed) : todo));
+      return state.map((todo) => {
+        if (todo.id === action.payload.id) {
+          todo.completed = true;
+        }
+        return todo;
+      });
 
     case actionTypes.CLEAR_ALL:
       return INITIAL_STATE;
@@ -21,6 +26,9 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         todo.completed = true;
         return todo;
       });
+
+    case actionTypes.CLEAR_SINGLE_TODO:
+      return state.filter((todo) => todo.id !== action.payload.id);
 
     default:
       return state;

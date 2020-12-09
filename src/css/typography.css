@@ -4,3 +4,10 @@ html {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
+
+
+@media(max-width:281px){
+  html{
+    font-size: 13px;
+  }
+}

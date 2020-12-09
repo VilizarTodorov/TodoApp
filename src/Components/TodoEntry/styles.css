@@ -1,0 +1,8 @@
+.time-controls-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls {
+  display: flex;
+}

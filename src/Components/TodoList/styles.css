@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  font-weight: bold;
 }
 
 .todo-head {
@@ -116,7 +117,6 @@
 }
 
 .todo-body {
-  position: relative;
   display: flex;
   flex-grow: 1;
   padding: 5px;
@@ -140,12 +140,12 @@
 }
 
 .todo-entry {
-  height: 70px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
   width: 90%;
   justify-content: space-between;
   align-items: center;
   display: flex;
-  font-weight: bold;
   border-bottom: 1px solid gray;
 }
 
@@ -205,4 +205,9 @@
 
 .fa-plus {
   color: white;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
 }

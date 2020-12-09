@@ -9,7 +9,6 @@
   transition: all 0.4s ease-in-out;
   color: white;
   z-index: 6;
-  font-weight: bold;
 }
 
 .todo-menu.menu-active {
