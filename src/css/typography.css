@@ -2,12 +2,23 @@
 
 html {
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
 }
 
+@media (max-width: 420px) {
+  html {
+    font-size: 17px;
+  }
+}
 
-@media(max-width:281px){
-  html{
+@media (max-width: 390px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 281px) {
+  html {
     font-size: 13px;
   }
 }

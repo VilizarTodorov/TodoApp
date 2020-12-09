@@ -21,16 +21,16 @@ const TodoMenu = (props) => {
     <aside className={`todo-menu ${props.isActive ? "menu-active" : ""}`}>
       <ul className="menu-options">
         <li onClick={clearAll} className="option">
-          Clear all
+          <p className="clickable">Clear all</p>
         </li>
         <li onClick={clearCompleted} className="option">
-          Clear Completed
+          <p className="clickable">Clear Completed</p>
         </li>
         <li onClick={markAllAsCompleted} className="option">
-          Mark All Completed
+          <p className="clickable">Mark All Completed</p>
         </li>
       </ul>
-      <i onClick={props.expand} className="fas fa-arrow-left fa-lg menu-arrow"></i>
+      <i onClick={props.expand} className="fas fa-arrow-left fa-lg menu-arrow clickable"></i>
     </aside>
   );
 };

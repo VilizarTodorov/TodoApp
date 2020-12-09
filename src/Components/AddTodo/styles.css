@@ -75,12 +75,3 @@ input:-webkit-autofill {
   -webkit-text-fill-color: white !important;
   -webkit-box-shadow: 0 0 0 30px rgb(57 79 172) inset !important;
 }
-/* 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  /* border: none; */
-/* border-bottom: 1px solid lightgray; */
-/* outline: none; */
-/* } */

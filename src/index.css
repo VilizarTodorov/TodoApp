@@ -1,10 +1,9 @@
-@import url(./css/reset.css);
-@import url(./css/typography.css);
+@import url(./css/styles.css);
 
-body{
-    background-color: grey;
+body {
+  background-color: lightskyblue;
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }

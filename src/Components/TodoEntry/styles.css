@@ -1,3 +1,33 @@
+.todo-entry {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid gray;
+}
+
+.container {
+  width: 80%;
+  align-items: center;
+  display: flex;
+}
+
+.task-icon {
+  width: 60px;
+  border: 1px solid gray;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.task-main-info {
+  margin-left: 10px;
+}
+
 .time-controls-wrapper {
   display: flex;
   flex-direction: column;
