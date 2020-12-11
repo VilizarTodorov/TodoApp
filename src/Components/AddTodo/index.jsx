@@ -7,7 +7,6 @@ import { connect } from "react-redux";
 const INITIAL_STATE = {
   category: "",
   title: "",
-  time: "",
   place: "",
   note: "",
 };
@@ -23,16 +22,16 @@ class AddTodoForm extends React.Component {
   };
 
   onChange = (event) => {
+    console.log(event.target.value);
     this.setState({ [event.target.name]: event.target.value });
   };
 
   onSubmit = (event) => {
     event.preventDefault();
-    const { category, title, time, place, note } = this.state;
+    const { category, title, place, note } = this.state;
     const content = {
       category,
       title,
-      time,
       place,
       note,
       completed: false,
@@ -43,7 +42,7 @@ class AddTodoForm extends React.Component {
   };
 
   render() {
-    const { category, title, time, place, note } = this.state;
+    const { category, title, place, note } = this.state;
 
     return (
       <div className={`App-add-task ${this.props.isActive ? "active" : ""}`}>
@@ -89,6 +88,7 @@ class AddTodoForm extends React.Component {
             value={title}
             onChange={this.onChange}
             required
+            autoComplete="off"
           />
           <input
             className="form-item"
@@ -98,16 +98,9 @@ class AddTodoForm extends React.Component {
             placeholder="Place"
             value={place}
             onChange={this.onChange}
+            autoComplete="off"
           />
-          <input
-            className="form-item"
-            id="time"
-            name="time"
-            type="text"
-            placeholder="Time"
-            value={time}
-            onChange={this.onChange}
-          />
+
           <input
             className="form-item"
             id="note"
@@ -116,6 +109,7 @@ class AddTodoForm extends React.Component {
             placeholder="Note"
             value={note}
             onChange={this.onChange}
+            autoComplete="off"
           />
           <button className="submit-button clickable">ADD YOUR THING</button>
         </form>

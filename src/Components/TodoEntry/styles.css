@@ -36,9 +36,8 @@
   overflow: hidden;
 }
 
-.time-controls-wrapper {
-  display: flex;
-  flex-direction: column;
+.task-main-info.completed{
+  text-decoration: line-through;
 }
 
 .controls {
