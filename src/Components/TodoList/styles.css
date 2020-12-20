@@ -30,6 +30,19 @@
   }
 }
 
+@media (max-height: 481px) {
+  .aspect-ratio-box {
+    height: 125px;
+    font-size: 15px;
+  }
+}
+
+@media (max-height: 321px) {
+  .aspect-ratio-box {
+    font-size: 11px;
+  }
+}
+
 .aspect-ratio-box::before {
   display: block;
   content: "";
@@ -151,6 +164,30 @@
   display: flex;
   overflow-y: auto;
   flex-direction: column;
+}
+
+@media (max-height: 534px) {
+  .tasks-list {
+    height: 320px;
+  }
+}
+
+@media (max-height: 481px) {
+  .tasks-list {
+    height: 295px;
+  }
+}
+
+@media (max-height: 361px) {
+  .tasks-list {
+    height: 173px;
+  }
+}
+
+@media (max-height: 321px) {
+  .tasks-list {
+    height: 135px;
+  }
 }
 
 .add-new-task.icon-container {

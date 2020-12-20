@@ -69,7 +69,7 @@ class TodoList extends React.Component {
         category={x.category}
         taskName={x.title}
         location={x.place}
-        time={x.time}
+        note={x.note}
       ></TodoEntry>
     ));
 
